@@ -3,8 +3,8 @@ import requests
 
 # ⚠️ When running locally
 # API_URL = "http://localhost:8000/predict"
-ip = requests.get("https://api.ipify.org").text
-API_URL = "http://"+ip+":8000/predict"
+# ip = requests.get("https://api.ipify.org").text
+API_URL = "http://loksai-api-svc:8000/predict"
 print(API_URL)
 
 st.title("Loksai MLOps Feedback Analyzer")
@@ -33,3 +33,4 @@ if st.button("Analyze"):
             )
         else:
             st.error("Failed to get prediction from API")
+            st.error(f"API error: {response.text}")
