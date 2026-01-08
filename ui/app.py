@@ -4,7 +4,7 @@ import requests
 # ⚠️ When running locally
 # API_URL = "http://localhost:8000/predict"
 ip = requests.get("https://api.ipify.org").text
-API_URL = "http://"+ip+":30080/predict"
+API_URL = "http://"+ip+":8000/predict"
 print(API_URL)
 
 st.title("Loksai MLOps Feedback Analyzer")
